@@ -1,14 +1,14 @@
 import cv2
 import numpy as np
 
-image = cv2.imread("snow_pic.jpg")
+image = cv2.imread("media/snow_pic.jpg")
 image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 image = cv2.resize(image, (430, 600), interpolation=cv2.INTER_LINEAR)
 
 height, width = image.shape
 
 writer = cv2.VideoWriter(
-    "snow_vid.mp4", cv2.VideoWriter_fourcc(*"mp4v"), 24, (width, height))
+    "media/snow_vid.mp4", cv2.VideoWriter_fourcc(*"mp4v"), 24, (width, height))
 
 while True:
     frame = image.copy()

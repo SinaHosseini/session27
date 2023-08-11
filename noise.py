@@ -1,13 +1,13 @@
 import cv2
 import numpy as np
 
-image_tv = cv2.imread("old_TV.jpg")
+image_tv = cv2.imread("media/old_TV.jpg")
 image_tv = cv2.cvtColor(image_tv, cv2.COLOR_BGR2GRAY)
 row, cell = image_tv.shape
 
 _, TV_image_thresh = cv2.threshold(image_tv, 250, 255, cv2.THRESH_BINARY)
 
-writer = cv2.VideoWriter("TV_noise.mp4",
+writer = cv2.VideoWriter("media/TV_noise.mp4",
                          cv2.VideoWriter_fourcc(*'mp4v'), 40, (cell, row))
 
 while True:
