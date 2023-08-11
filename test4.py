@@ -8,7 +8,7 @@ rows = frame.shape[0]
 cols = frame.shape[1]
 
 writer = cv2.VideoWriter(
-    "result.mp4", cv2.VideoWriter_fouecc(*"MJPG"), 30, (rows, cols))
+    "media/result.mp4", cv2.VideoWriter_fourcc(*"mp4v"), 30, (rows, cols))
 
 while True:
     _, frame = cap.read()
